@@ -1,0 +1,47 @@
+Description
+
+Nmap (Network Mapper) is an open-source network scanning tool used in ethical hacking and network security. It helps identify active hosts, open ports, running services, and operating system information on a network. Network scanning is an important step in network reconnaissance and vulnerability assessment.
+
+Nmap helps security professionals understand the structure of a network and identify potential security weaknesses. It can scan individual hosts, multiple IP addresses, and network ranges. It also provides information about the services running on open ports, which helps administrators identify outdated software and unnecessary services.
+
+The main purpose of Nmap is to discover devices connected to a network and examine their exposed network services. For example, port 80 is commonly used for HTTP, while port 443 is used for HTTPS. If these ports are open, the corresponding services may be accessible over the network.
+
+Nmap supports different scanning options. A fast scan using the -F option checks a limited number of common ports. The -O option attempts to identify the operating system of the target, while the -sV option detects the versions of running services.
+
+The results of an Nmap scan include the target IP address, host status, port numbers, port states, service names, and, when available, service versions and operating system details. These results help security professionals assess network exposure and recommend suitable security measures.
+
+Nmap is widely used in penetration testing, network auditing, troubleshooting, and vulnerability assessment. It should be used only on authorized systems and networks.
+
+
+Procedure
+
+Step 1: Open Kali Linux and launch the Terminal.
+
+Step 2: Check whether Nmap is installed by entering the following command:
+
+nmap --version
+
+Step 3: Perform a fast scan of the authorized lab network using the command:
+
+sudo nmap -F wonderhowto.com
+
+
+Step 4: Observe the scan output to identify active hosts, open ports, and their associated services.
+
+Step 5: Detect the operating system of an authorized lab machine using the command:
+
+sudo nmap -O <target-IP>
+ sudo nmap -O 104.193.19.59  
+
+Replace <target-IP> with the IP address of the lab machine.
+
+Step 6: Detect the versions of services running on open ports using the command:
+
+sudo nmap -sV <target-IP>
+sudo nmap -sV scanme.nmap.org
+
+Step 7: Record the target IP address, open ports, service names, service versions, and operating system information displayed in the output.
+
+Step 8: Analyze the results to identify exposed services and potential security weaknesses.
+
+Step 9: Stop the scan after collecting the required information and prepare the results for the lab report.
