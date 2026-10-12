@@ -1,0 +1,106 @@
+## Description
+
+
+
+WPScan is a WordPress security scanner used to identify security vulnerabilities in WordPress websites. It is a command-line tool available in Kali Linux. It helps security professionals assess the security of WordPress installations by identifying vulnerable plugins, themes, outdated WordPress versions, and exposed configuration files.
+
+WordPress is a popular content management system used to create websites and web applications. If it is not properly maintained, attackers may exploit outdated software, vulnerable plugins, weak passwords, or incorrect configurations to gain unauthorized access.
+
+WPScan helps security professionals identify these security weaknesses before attackers can exploit them. It can perform basic website scanning, enumerate WordPress users, identify known vulnerabilities in installed components, and test password strength using a wordlist in an authorized lab environment.
+
+The main functions of WPScan are:
+
+1. **Website Scanning:** Scans a WordPress website to identify basic security issues.
+2. **Plugin Enumeration:** Identifies installed plugins and checks for known vulnerabilities.
+3. **Theme Enumeration:** Detects installed themes and their potential security weaknesses.
+4. **User Enumeration:** Identifies publicly discoverable WordPress usernames.
+5. **WordPress Version Detection:** Identifies the WordPress version and checks for known vulnerabilities.
+6. **Brute-Force Testing:** Uses a wordlist to test whether an authorized test account has a weak password.
+7. **Configuration Checking:** Detects potentially exposed files and security-related configuration issues.
+
+Brute-force testing is a technique in which multiple password guesses are tested against a specified username. A wordlist is a text file containing commonly used or predefined test passwords. The RockYou wordlist is a commonly used password list in security testing. These tests should be performed only on systems for which permission has been obtained.
+
+WPScan provides information that helps administrators understand the security condition of their websites. After identifying vulnerabilities, administrators can update WordPress, remove unnecessary or vulnerable plugins, enforce strong passwords, enable login rate limiting, and correct configuration errors.
+
+Therefore, WPScan is a useful tool for WordPress security auditing and vulnerability assessment. It helps identify weaknesses and improve the overall security of WordPress websites.
+
+
+## Procedure: WPScan
+
+
+
+**Step 1: Open Kali Linux Terminal**
+
+Open the terminal in Kali Linux.
+
+**Step 2: Display WPScan Help Options**
+
+Execute the following command:
+
+    wpscan --help
+
+This displays the available WPScan commands and options.
+
+**Step 3: Perform a Basic Scan**
+
+Execute the following command:
+
+    wpscan --url http://TARGET-IP
+wpscan --url https://www.sonymusic.com/
+
+
+Replace TARGET-IP with the IP address of your authorized WordPress lab application. This scan identifies WordPress information and potential security issues.
+
+**Step 4: Enumerate WordPress Users**
+
+Execute the following command:
+
+    wpscan --url http://TARGET-IP -e u
+wpscan --url https://www.sonymusic.com/ -e u
+
+
+This attempts to identify publicly discoverable WordPress usernames.
+
+**Step 5: Check the Wordlist**
+
+Execute:
+
+    ls /usr/share/wordlists/
+
+Check whether the RockYou wordlist is available.
+
+If rockyou.txt.gz is present, extract it using:
+
+    sudo gzip -dk /usr/share/wordlists/rockyou.txt.gz
+
+**Step 6: Perform Brute-Force Testing**
+
+Brute-force testing attempts to identify a weak password by trying passwords from a wordlist against a specified username. Use only your authorized lab application and a controlled test wordlist.
+
+Command syntax:
+
+    wpscan --url http://TARGET-IP -U TEST-USERNAME -P /path/to/test-passwords.txt
+wpscan --url https://www.sonymusic.com/ -U trowan -P /usr/share/wordlists/rockyou.txt   
+
+
+
+
+Replace TARGET-IP with your lab website address, TEST-USERNAME with the test account username, and the wordlist path with the location of your test password file.
+
+**Step 7: Examine the Scan Results**
+
+Observe the output for the following information:
+
+1. WordPress version.
+2. Identified usernames.
+3. Vulnerable plugins and themes.
+4. Exposed files and directories.
+5. Weak test credentials identified during authorized password testing.
+
+**Step 8: Document the Findings**
+
+Record the security issues identified during the scan. Recommend updating WordPress, removing vulnerable plugins, enforcing strong passwords, enabling login rate limiting, and correcting configuration errors.
+
+**Result:**
+
+Thus, a security assessment of the authorized WordPress lab application was performed using WPScan. Potential vulnerabilities were examined, WordPress usernames were enumerated, and password strength testing using a controlled wordlist was studied.
