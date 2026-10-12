@@ -1,0 +1,50 @@
+Description 
+
+## Description
+
+SQL injection is a web application security vulnerability that occurs when user input is used to construct SQL queries without proper input validation. It allows an attacker to inject malicious SQL statements into the application and may result in unauthorized access to database information.
+
+SQL injection testing is performed to identify whether a web application properly validates user input before executing database queries. A successful SQL injection attack may allow an attacker to read sensitive information, modify or delete database records, and perform unauthorized database operations.
+
+SQL injection attacks are classified into three main types:
+
+1. **In-band SQL Injection:** The attacker retrieves data through the same channel used to inject the SQL code.
+2. **Out-of-band SQL Injection:** The attacker retrieves data through a different communication channel.
+3. **Inferential or Blind SQL Injection:** The attacker infers information by observing the application's responses and behavior.
+
+Common SQL injection techniques include UNION-based, Boolean-based, error-based, out-of-band, and time-delay testing.
+
+Burp Suite is a web application security testing tool used to intercept, inspect, and analyze HTTP requests and responses. Its Proxy feature captures web traffic, and its Intruder feature sends multiple test inputs to identify unusual application behavior.
+
+In Burp Suite Community Edition, SQL injection testing can be performed manually using Intruder by configuring payload positions and adding SQL test strings. The HTTP responses are then analyzed for database error messages, unexpected content, changes in response length, and response delays. These observations help identify potential SQL injection vulnerabilities.
+
+SQL injection vulnerabilities can be prevented by using parameterized queries, proper server-side input validation, and secure database access controls. Testing should be performed only on authorized applications or vulnerable lab environments.
+
+
+
+
+
+## Procedure: SQL Injection Testing Using Burp Suite Community Edition
+
+
+1. Open Kali Linux and start Burp Suite. Select Temporary Project, click Next, select Use Burp defaults, and click Start Burp.
+
+2. Open Burp Suite's built-in browser and visit the authorized vulnerable lab web application. Navigate to a page containing an input field, such as a product search box.
+
+3. Enter a normal value in the input field and submit it. In Burp Suite, go to Proxy → HTTP history and identify the corresponding HTTP request.
+
+4. Right-click the request and select Send to Intruder. Open the Intruder → Positions tab and identify the parameter to be tested. Mark the appropriate parameter as the payload position.
+
+5. Open the Payloads tab. Under Payload settings, select Simple list. Since Burp Suite Community Edition does not provide the same built-in SQL fuzzing wordlist feature as Professional, manually enter suitable SQL injection test strings for the authorized lab application.
+
+6. Check the payload positions and confirm that the selected parameter is correct. Click Start attack to begin sending the configured test requests.
+
+7. After the attack finishes, examine the results in the Intruder window. Compare the HTTP status codes, response lengths, error messages, page contents, and response times.
+
+8. Look for unusual responses, such as database error messages, unexpected content, or significant differences in response length. In a vulnerable lab, responses with longer lengths may contain additional products or data.
+
+9. Record the observations and identify any potential SQL injection vulnerability. A difference in the response alone does not confirm a vulnerability; verify the finding using the lab's expected behavior.
+
+10. Recommend remediation measures, such as using parameterized SQL queries, validating input on the server side, and avoiding detailed database error messages.
+
+**Result:** SQL injection testing was performed on the authorized lab web application using Burp Suite Community Edition, and the HTTP responses were analyzed for potential SQL injection vulnerabilities.
