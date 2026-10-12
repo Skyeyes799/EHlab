@@ -1,0 +1,55 @@
+## 3. theHarvester – Passive Reconnaissance
+
+### Description
+
+
+theHarvester is a command-line tool available in Kali Linux that is used for passive reconnaissance and information gathering. It collects publicly available information about a target domain from sources such as search engines and public databases.
+
+It helps ethical hackers and penetration testers gather information about an organization before conducting a security assessment. The tool can identify email addresses, subdomain names, virtual hosts, employee names, IP addresses, and other publicly available information related to a domain.
+
+Passive reconnaissance is the process of collecting information about a target without directly interacting with its systems to test for vulnerabilities. This helps security professionals understand the target's publicly exposed information and identify potential security risks.
+
+theHarvester supports different data sources and allows users to specify a target domain and the sources from which information should be collected. The gathered information can help identify exposed subdomains, publicly available email addresses, and possible entry points for further security assessment.
+
+The basic syntax is:
+
+theHarvester -d <domain> -b <source>
+
+Here:
+- -d specifies the target domain.
+- -b specifies the data source to use.
+- all can be used to request all supported sources, subject to the installed version and source availability.
+
+The collected information helps security professionals understand an organization's public exposure and recommend suitable security measures.
+
+### Procedure
+
+
+
+1. Open Kali Linux and launch the terminal.
+
+2. Check whether theHarvester is installed by executing the following command:
+
+theHarvester -h
+
+3. Perform reconnaissance on the authorized lab domain using the following command:
+
+theHarvester -d zonetransfer.me -b all
+
+4. Here, zonetransfer.me is the target domain, and all specifies the supported data sources.
+
+5. Allow the tool to execute and collect publicly available information from the selected sources.
+
+6. Observe the terminal output. The tool may display:
+   - Email addresses
+   - Subdomains and hostnames
+   - IP addresses associated with discovered hosts
+   - Virtual hosts and other available information
+
+7. Examine the results and note the discovered information.
+
+8. Record the findings in the lab report for further security assessment.
+
+### Result
+
+Passive reconnaissance was performed using theHarvester to identify publicly available email addresses, subdomains, and host information associated with the target domain.
