@@ -1,0 +1,54 @@
+Description
+
+Recon-ng is a free and open-source reconnaissance tool written in Python. It is available on GitHub and can be used in Kali Linux through a command-line interface. Recon-ng is based on Open-Source Intelligence (OSINT) and is used to gather information about a target domain from publicly available sources. Its interface is similar to Metasploit, making it convenient for security professionals and penetration testers to perform reconnaissance.
+Recon-ng provides a powerful environment for web-based information gathering. It contains various modules that help collect information about domains, hostnames, subdomains, IP addresses, and other publicly available details. These modules allow users to perform different reconnaissance tasks according to their requirements. The tool also provides interactive help, command completion, database interaction, and built-in functions that make information gathering easier.
+One of the important features of Recon-ng is its workspace facility. A workspace provides a separate environment for conducting reconnaissance on different targets. It helps organize the information collected during an investigation and keeps the activities for different targets separate.
+Recon-ng also provides a marketplace where users can search for and install modules. Each module performs a specific information-gathering task. After installing a suitable module, the user can load it, configure the required options, specify the target domain, and execute the module using the run command. The collected information can then be examined and documented.
+Recon-ng can be used to gather domain-related information, discover subdomains, identify hostnames, perform DNS-related information gathering, and collect other details depending on the modules installed and the data sources available. It helps security professionals understand the publicly exposed information associated with a domain before conducting further security assessments.
+The main advantage of Recon-ng is that it combines multiple reconnaissance functions in a single framework. Its modular structure allows users to select suitable modules for different tasks. It is useful for ethical hackers, penetration testers, and cybersecurity professionals during the information-gathering phase of security testing.
+Thus, Recon-ng is an effective reconnaissance tool for gathering and organizing information about authorized target domains.
+
+
+Procedures
+
+Step 1: Open the Terminal in Kali Linux.
+
+Step 2: Download Recon-ng by typing the following command.
+
+git clone https://github.com/lanmaster53/recon-ng.git
+
+Step 3: Launch Recon-ng by typing the following command.
+
+recon-ng
+
+Step 4: Create a workspace for reconnaissance by typing the following command.
+
+workspaces create lab
+
+Step 5: Search for available modules using the following command.
+
+marketplace search
+
+Step 6: Install the required module using the following command.
+
+marketplace install recon/domains-hosts/hackertarget
+
+Step 7: Search for the installed module by typing the following command.
+
+modules search hack
+
+Step 8: Load the suitable module into the workspace using the following command.
+
+modules load recon/domains-hosts/hackertarget
+
+Step 9: Set the authorized target domain as the source using the following command.
+
+options set SOURCE google.com
+
+Replace your-authorized-domain.com with the authorized lab target domain.
+
+Step 10: Execute the module by typing the following command.
+
+run
+
+Step 11: Observe the output displayed by Recon-ng and document the information gathered, such as hostnames and domain-related information.
