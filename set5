@@ -1,0 +1,30 @@
+1. What is email spoofing?
+Email spoofing is a technique in which an attacker forges the sender's email address to appear as a trusted person or organization. It is commonly used in phishing attacks.
+2. What is multi-factor authentication (MFA)?
+MFA is a security method that requires two or more different types of verification to confirm a user's identity. Examples include a password, fingerprint, and OTP.
+3. Differentiate between a packet-filtering firewall and a stateful firewall.
+A packet-filtering firewall checks individual packets based on rules such as IP addresses and port numbers. A stateful firewall also tracks active connections to decide which packets to allow.
+4. What is incident eradication?
+Incident eradication is the process of removing malware and eliminating the root cause of a security incident. It helps prevent the threat from returning.
+5. What is promiscuous mode in network sniffing?
+Promiscuous mode allows a network interface to capture packets it receives, even when they are not addressed to that interface. It is used for network traffic monitoring and analysis.
+6. State one method of preventing MITM attacks.
+Use HTTPS with valid TLS certificates to encrypt communication between users and websites. This helps prevent attackers from intercepting or modifying data.
+7. What is a honeynet?
+A honeynet is a network of honeypots designed to attract and monitor attackers. It helps security professionals study attack techniques and detect malicious activities.
+8. What is the difference between footprinting and scanning?
+Footprinting collects information about a target, such as domains and IP addresses. Scanning examines the target to identify live hosts, open ports, and running services.
+9. What is the purpose of Nmap service-version detection?
+Nmap service-version detection identifies the services and software versions running on open ports. It helps security testers identify potentially vulnerable software.
+10. What is DNS enumeration?
+DNS enumeration is the process of collecting information about a domain's DNS records, servers, and subdomains. It helps map the target's network infrastructure.
+11. What is the purpose of a WPScan report?
+A WPScan report presents security findings about a WordPress website, including potentially vulnerable plugins, themes, and software versions. It helps administrators identify and fix security weaknesses.
+12. What is the role of Burp Suite in SQL injection testing?
+Burp Suite helps testers intercept and modify HTTP requests to examine web application inputs. It can help identify and verify SQL injection vulnerabilities.
+13. What is a vulnerability?
+A vulnerability is a weakness in a system's design, software, or configuration that can be exploited by an attacker. It may lead to unauthorized access or data loss.
+14. What is the purpose of packet analysis in Wireshark?
+Wireshark captures and analyzes network packets to understand network communication. It helps troubleshoot network problems and investigate suspicious traffic.
+15. State one method of preventing privilege escalation.
+Apply the principle of least privilege by giving users only the permissions required for their tasks. Regularly update software and remove unnecessary administrative privileges.
