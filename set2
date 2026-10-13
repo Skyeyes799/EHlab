@@ -1,0 +1,30 @@
+1. What is IP spoofing?
+IP spoofing is a technique in which an attacker falsifies the source IP address of a packet. It is used to hide the attacker's identity or impersonate another system.
+2. What is a dictionary attack?
+A dictionary attack is a password-cracking technique that tries words from a predefined list of common passwords. It is used to gain access to accounts with weak passwords.
+3. Differentiate between a firewall and a router.
+A router forwards data packets between different networks using IP addresses. A firewall monitors and filters network traffic according to security rules.
+4. What is a covert channel attack?
+A covert channel attack uses an unintended communication path to secretly transfer information. It can be used to bypass security controls and leak sensitive data.
+5. What is remote exploitation?
+Remote exploitation is the process of exploiting a vulnerability in a system over a network. It may allow an attacker to gain unauthorized access or execute malicious code.
+6. What is a honeypot?
+A honeypot is a decoy system designed to attract attackers and monitor their activities. It helps security professionals detect and analyze cyberattacks.
+7. What is horizontal privilege escalation?
+Horizontal privilege escalation occurs when a user accesses another user's resources at the same privilege level. For example, accessing another user's account without authorization.
+8. What is passive reconnaissance?
+Passive reconnaissance involves collecting information about a target without directly interacting with its systems. Examples include searching websites, social media, and public records.
+9. What is a workspace in Recon-ng?
+A workspace in Recon-ng is a separate environment used to organize reconnaissance activities and collected data. It helps keep information about different targets separate.
+10. What is an open port?
+An open port is a network port that accepts connections or requests from other systems. It indicates that a service may be listening on that port.
+11. What is a subdomain?
+A subdomain is a part of a main domain used to organize websites or services. For example, blog.example.com is a subdomain of example.com.
+12. What is a WordPress plugin?
+A WordPress plugin is an extension that adds new features or functionality to a WordPress website. Plugins can provide security, contact forms, and other services.
+13. What is the purpose of Burp Proxy?
+Burp Proxy intercepts HTTP/HTTPS traffic between a web browser and a web server. It allows testers to inspect and modify requests and responses during security testing.
+14. Expand CVE.
+CVE stands for Common Vulnerabilities and Exposures. It provides standardized identifiers for publicly known cybersecurity vulnerabilities.
+15. What is a false positive in vulnerability scanning?
+A false positive occurs when a vulnerability scanner reports a security issue that does not actually exist. It requires verification to avoid unnecessary remediation efforts.
