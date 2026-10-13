@@ -1,0 +1,30 @@
+1. Define spoofing.
+Spoofing is a cyberattack in which an attacker pretends to be a trusted device, user, or system. It is used to deceive others and gain unauthorized access.
+2. What is a brute-force attack?
+A brute-force attack is a method of trying different password combinations until the correct one is found. It is commonly used to crack passwords.
+3. State one function of a firewall.
+A firewall monitors and filters incoming and outgoing network traffic based on security rules. It helps prevent unauthorized access to a network.
+4. What is incident response?
+Incident response is the process of identifying, managing, and recovering from cybersecurity incidents. Its purpose is to minimize damage and restore normal operations.
+5. Define network sniffing.
+Network sniffing is the process of monitoring and capturing data packets travelling through a network. It is used for network troubleshooting and security analysis.
+6. What is a Man-in-the-Middle (MITM) attack?
+A MITM attack occurs when an attacker secretly intercepts communication between two parties. The attacker may monitor or modify the exchanged data.
+7. What is privilege escalation?
+Privilege escalation is an attack in which a user gains permissions beyond their authorized level. It can allow an attacker to access restricted resources or perform administrative tasks.
+8. What is reconnaissance in ethical hacking?
+Reconnaissance is the initial phase of ethical hacking in which information about a target is collected. It helps identify potential vulnerabilities and attack surfaces.
+9. What is Recon-ng used for?
+Recon-ng is a reconnaissance framework used to collect information about a target. It helps gather details such as domains, subdomains, and related online information.
+10. What is the purpose of Nmap?
+Nmap is a network scanning tool used to discover live hosts, open ports, and running services. It helps identify potential security weaknesses in a network.
+11. What is theHarvester?
+theHarvester is an OSINT tool used to collect publicly available information about a target. It can gather email addresses, subdomains, and host information.
+12. What is WPScan used for?
+WPScan is a security scanning tool designed to identify vulnerabilities in WordPress websites. It can detect vulnerable plugins, themes, and WordPress versions.
+13. What is SQL injection?
+SQL injection is a web application attack in which malicious SQL statements are inserted into input fields. It can allow attackers to access, modify, or delete database information.
+14. What is Burp Suite?
+Burp Suite is a web application security testing tool used to inspect and modify HTTP/HTTPS requests. It helps identify vulnerabilities in web applications.
+15. What is the purpose of OWASP ZAP?
+OWASP ZAP is an open-source web application security testing tool. It helps identify vulnerabilities such as injection flaws and security misconfigurations.
