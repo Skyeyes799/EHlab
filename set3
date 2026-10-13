@@ -1,0 +1,31 @@
+1. What is ARP spoofing?
+ARP spoofing is an attack in which an attacker sends fake ARP messages to associate their MAC address with another device's IP address. It can be used to intercept network traffic.
+2. State one method to prevent brute-force attacks.
+Use account lockout or rate limiting after multiple failed login attempts. This helps prevent attackers from repeatedly guessing passwords.
+3. What is a firewall rule?
+A firewall rule is a condition that determines whether network traffic should be allowed or blocked. It can be based on IP addresses, ports, and protocols.
+4. Name any two phases of incident response.
+Early Detection: Identifying a security event using monitoring tools such as SIEM.
+Analysis: Examining alerts and indicators of compromise to identify and verify security threats.
+5. What is passive sniffing?
+Passive sniffing is the process of monitoring network traffic without actively transmitting or altering packets. It is commonly associated with shared network environments.
+6. What is DNS spoofing?
+DNS spoofing is an attack in which false DNS information is provided to redirect users to an incorrect IP address. It may lead users to malicious websites.
+7. What is vertical privilege escalation?
+Vertical privilege escalation occurs when a user gains higher privileges than originally authorized. For example, a normal user gaining administrator access.
+8. What is OSINT?
+OSINT stands for Open-Source Intelligence. It involves collecting and analyzing publicly available information from websites, social media, and other public sources.
+9. What is the purpose of the -sV option in Nmap?
+The -sV option in Nmap is used for service and version detection on open ports. It helps identify the services and software versions running on a target.
+10. What type of information can theHarvester collect?
+theHarvester collects publicly available information such as email addresses, subdomains, hostnames, and IP addresses. It is used during reconnaissance.
+11. What is the purpose of WPScan vulnerability enumeration?
+WPScan vulnerability enumeration identifies potentially vulnerable WordPress components, including plugins, themes, and WordPress versions. It helps security testers identify weaknesses.
+12. What is SQL injection?
+SQL injection is a web application attack in which malicious SQL statements are inserted into input fields. It can allow unauthorized access to or modification of database information.
+13. What is Burp Repeater used for?
+Burp Repeater is used to modify and resend HTTP requests to a web application. It helps testers manually examine application responses and verify vulnerabilities.
+14. What is the OWASP Top 10?
+The OWASP Top 10 is a list of major web application security risks published by OWASP. It helps developers and security testers understand and reduce common vulnerabilities.
+15. What is vulnerability assessment?
+Vulnerability assessment is the process of identifying and evaluating security weaknesses in systems, networks, or applications. It helps organizations prioritize and fix security risks.
