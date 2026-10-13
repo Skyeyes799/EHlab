@@ -1,0 +1,30 @@
+1. What is MAC spoofing?
+MAC spoofing is changing a device's MAC address to imitate another device on a network. It can be used to bypass MAC-based access controls.
+2. What is password sniffing?
+Password sniffing is capturing network traffic to obtain passwords transmitted over a network. It can expose login credentials when they are not properly protected.
+3. What is the purpose of a router's routing table?
+A routing table stores information about available network routes and their destinations. A router uses it to select the best path for forwarding data packets.
+4. What is incident containment?
+Incident containment is the process of limiting the spread and impact of a security incident. It helps prevent further damage while the incident is investigated.
+5. Define covert channel.
+A covert channel is an unintended communication path used to secretly transfer information. It may be used to bypass security controls and leak sensitive data.
+6. What is session hijacking?
+Session hijacking is an attack in which an attacker takes control of a user's active session. It may allow unauthorized access to the user's account.
+7. What is remote code execution?
+Remote code execution (RCE) is a vulnerability that allows an attacker to execute code on a remote system. It may lead to unauthorized access or system compromise.
+8. What is the difference between active and passive reconnaissance?
+Active reconnaissance directly interacts with the target system, such as through scanning or pinging. Passive reconnaissance collects information from public sources without directly interacting with the target.
+9. What is a module in Recon-ng?
+A module in Recon-ng is a component designed to perform a specific reconnaissance task. Modules can collect information such as domains, hosts, and email addresses.
+10. Differentiate between an open port and a closed port.
+An open port has a service listening for connections or requests. A closed port is reachable, but no application is listening on it.
+11. What is banner grabbing?
+Banner grabbing is a technique used to collect information about services running on a system. It can reveal service names, software versions, and other details.
+12. What is user enumeration in WordPress security testing?
+User enumeration is the process of identifying valid usernames registered on a WordPress website. Attackers may misuse this information in password attacks.
+13. What is the purpose of Burp Suite's HTTP history?
+HTTP history records requests and responses exchanged between the browser and web server through Burp Suite. It helps testers inspect application traffic and identify potential vulnerabilities.
+14. What is the role of a web application vulnerability scanner?
+A web application vulnerability scanner automatically checks websites for security weaknesses. It helps identify issues that need verification and remediation.
+15. What is the principle of least privilege?
+The principle of least privilege means giving users only the minimum permissions required to perform their tasks. It reduces the risk of unauthorized access and misuse.
