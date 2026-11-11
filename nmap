@@ -32,6 +32,8 @@ Step 5: Detect the operating system of an authorized lab machine using the comma
 
 sudo nmap -O <target-IP>
  sudo nmap -O 104.193.19.59  
+sudo nmap -O 172.67.162.121 
+
 
 Replace <target-IP> with the IP address of the lab machine.
 
@@ -39,6 +41,8 @@ Step 6: Detect the versions of services running on open ports using the command:
 
 sudo nmap -sV <target-IP>
 sudo nmap -sV scanme.nmap.org
+sudo nmap -sV 172.67.162.121
+
 
 Step 7: Record the target IP address, open ports, service names, service versions, and operating system information displayed in the output.
 
