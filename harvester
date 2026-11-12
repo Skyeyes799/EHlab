@@ -1,3 +1,159 @@
+1. Aim
+To familiarize with theHarvester tool and use it to gather information about a target domain, such as email addresses, subdomains, virtual hosts, employee names, open ports and banners from publicly available sources.
+2. Theory
+Introduction to theHarvester
+theHarvester is an open-source, command-line information-gathering tool included in Kali Linux. It is used during the reconnaissance phase of ethical hacking and penetration testing.
+
+It acts as a wrapper for various search engines and public information sources to collect information related to a particular target domain.
+
+It gathers information from publicly available sources, such as:
+- Search engines.
+- PGP key servers.
+- Publicly available websites.
+- Other supported information sources.
+TheHarvester helps security professionals collect information about an organization without directly accessing its internal network.
+3. Information collected using theHarvester
+1. Email Addresses: Identifies email addresses associated with the target domain.
+2. Subdomains: Discovers subdomains belonging to the target domain.
+3. Virtual Hosts: Identifies virtual hosts associated with the target domain.
+4. Employee Names: Collects publicly available employee names.
+5. Open Ports: Identifies information about open ports when supported by the selected source and scan options.
+6. Banners: Collects publicly available service banner information.
+7. DNS Information: Recent versions provide additional capabilities such as DNS brute-forcing and reverse IP resolution.
+8. TLD Expansion: Helps identify related top-level domain variations.
+According to the PDF (pages 4–5), the tool is demonstrated using the target domain zonetransfer.me. 3 (1).pdf
+
+4. Working Principle
+theHarvester works by accepting a target domain and searching different publicly available sources for information related to that domain.
+
+The working principle involves the following steps:
+1. Target Selection: The user specifies the domain name to investigate.
+2. Source Selection: The user selects the search engine or information source.
+3. Information Gathering: The tool searches the selected sources for information related to the target domain.
+4. Email Collection: It identifies publicly available email addresses.
+5. Subdomain Discovery: It identifies subdomains associated with the target domain.
+6. IP Resolution: It attempts to resolve discovered hostnames into IP addresses.
+7. Result Display: The collected information is displayed in the Kali Linux terminal.
+
+
+
+
+
+5. Procedure / Algorithm
+Step 1: Open Kali Linux
+- Start the Kali Linux operating system.
+- Open the terminal.
+- Make sure theHarvester is installed.
+
+Step 2: Check theHarvester installation
+
+Type the following command:
+theHarvester -h
+
+
+- This command displays the help menu.
+- It shows the available options and command syntax.
+- It helps the user understand how to execute the tool.
+Step 3: Select the target domain
+
+Choose the domain to perform information gathering.
+
+Example:
+zonetransfer.me
+
+
+The target domain is supplied to theHarvester using the -d option.
+
+Step 4: Execute theHarvester
+
+Enter the following command as demonstrated in the PDF:
+theHarvester -b all -d zonetransfer.me
+
+
+Explanation of the command:
+Option	Description
+theHarvester	Executes the tool.
+-b	Specifies the data source or search engine.
+all	Selects all supported sources in the version used in the PDF.
+-d	Specifies the target domain.
+zonetransfer.me	Target domain name.
+
+Step 5: Information gathering
+
+After executing the command:
+- The tool starts searching different public sources.
+- It collects email addresses related to the target domain.
+- It searches for subdomains.
+- It identifies hostnames and attempts to resolve their IP addresses.
+- It gathers other available information.
+Step 6: View the results
+
+The results are displayed in the terminal under different sections.
+
+A. Emails Found
+
+Displays email addresses associated with the target domain.
+
+Example from the PDF:
+[+] Emails found:
+
+pippa@zonetransfer.me
+
+
+B. Hosts Found in Search Engines
+
+Displays discovered hostnames and their corresponding IP addresses.
+
+Example:
+[+] Hosts found in search engines:
+
+127.0.0.1:asdfbbox.zonetransfer.me
+4.23.39.254:office.zonetransfer.me
+207.46.197.32:owa.zonetransfer.me
+54.206.51.177:staging.zonetransfer.me
+217.147.177.157:testing.zonetransfer.me
+217.147.177.157:www.zonetransfer.me
+
+
+These are examples shown in the PDF, not guaranteed current results.
+
+Step 7: Analyze the collected information
+- Examine the discovered email addresses.
+- Identify the subdomains.
+- Examine the resolved IP addresses.
+- Identify possible exposed services and infrastructure.
+- Document the collected information for further security assessment.
+
+
+
+
+Reference: TheHarvester execution and output shown on page 5 of the supplied PDF.
+6. Algorithm
+Algorithm: Information Gathering Using theHarvester
+1. Start the Kali Linux operating system.
+2. Open the terminal.
+3. Check whether theHarvester is installed.
+4. Enter the help command to view available options.
+5. Select the target domain.
+6. Select the required search engine or information source.
+7. Execute theHarvester command with the target domain.
+8. Allow the tool to search publicly available sources.
+9. Collect email addresses and subdomain information.
+10. Resolve the discovered hostnames into IP addresses.
+11. Display the gathered information in the terminal.
+12. Analyze and document the results.
+13. Stop the execution.
+7. Important Commands for Lab Examination
+Command	Purpose
+theHarvester -h	Displays help information.
+theHarvester -b all -d zonetransfer.me	Searches all supported sources for the target domain (PDF example).
+theHarvester -b google -d example.com	Searches using Google, if supported by the installed version.
+theHarvester -b bing -d example.com	Searches using Bing, if supported by the installed version.
+
+
+
+
+
 ## 3. theHarvester – Passive Reconnaissance
 
 ### Description
