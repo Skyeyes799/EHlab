@@ -1,3 +1,164 @@
+1. Aim
+To perform active reconnaissance using the Recon-ng reconnaissance tool and gather information about a target domain.
+
+2. Theory
+Recon-ng is a free and open-source web reconnaissance framework written in Python. It is used for Open-Source Intelligence (OSINT) and information gathering during the initial phase of penetration testing.
+
+Recon-ng provides an interactive command-line interface similar to Metasploit. It contains several modules that help security professionals collect information about a target domain, such as domain names, subdomains, IP addresses, DNS records, host information and other publicly available information.
+
+Recon-ng provides a modular environment in which different modules can be installed and executed according to the requirements of the reconnaissance process.
+
+It also provides features such as workspace management, module searching, module installation, database interaction, command completion and contextual help.
+
+The workspace feature allows users to maintain separate environments for different targets. This helps organize the information collected during reconnaissance.
+
+Recon-ng is mainly used during the information-gathering phase of ethical hacking and penetration testing.
+Features of Recon-ng
+1. Free and Open Source: Recon-ng is freely available and its source code can be accessed through GitHub.
+2. Modular Framework: It provides different modules for performing various information-gathering activities.
+3. Command-Line Interface: It provides an interactive command-line interface for executing reconnaissance commands.
+4. Workspace Management: It allows users to create separate workspaces for different targets.
+5. Subdomain Enumeration: It helps identify subdomains associated with a target domain.
+6. DNS Information Gathering: It provides modules for collecting DNS-related information.
+7. IP Address Discovery: It helps identify IP addresses associated with a target domain.
+8. Database Interaction: It stores the collected reconnaissance information in an internal database.
+9. Module Installation: Users can search, install and execute modules according to their requirements.
+10. Information Gathering: It helps collect publicly available information about websites and organizations.
+Uses of Recon-ng
+1. To perform reconnaissance on a target domain.
+2. To identify IP addresses associated with a domain.
+3. To discover subdomains of a target website.
+4. To collect DNS-related information.
+5. To perform WHOIS information gathering.
+6. To identify publicly available host information.
+7. To collect information about web technologies.
+8. To support vulnerability assessment and penetration testing.
+9. To organize reconnaissance information using workspaces.
+10. To identify potential attack surfaces during security assessments.
+
+
+
+
+3. Procedure
+Step 1: Open Kali Linux Terminal
+
+Start Kali Linux and open the terminal.
+
+Step 2: Download Recon-ng
+
+Enter the following command to clone the Recon-ng repository from GitHub.
+git clone https://github.com/lanmaster53/recon-ng.git
+
+
+This command downloads the Recon-ng source code from GitHub into the local system.
+
+Step 3: Launch Recon-ng
+
+Enter the following command:
+recon-ng
+
+
+This launches the Recon-ng interactive console.
+
+After successful execution, the Recon-ng prompt will appear.
+
+Step 4: Create a Workspace
+
+A workspace is a separate environment used to organize reconnaissance activities for a particular target.
+
+First, view the available workspace commands:
+workspaces
+
+
+Create a new workspace:
+workspaces create GeeksForGeeks
+
+
+Here, GeeksForGeeks is the name of the workspace.
+
+Step 5: Search for Available Modules
+
+Enter the following command:
+marketplace search
+
+
+This command displays the available modules in the Recon-ng marketplace along with their installation status.
+
+Step 6: Install Modules
+
+To install a particular module, use:
+marketplace install <module_name>
+
+
+To install all available modules, use:
+marketplace install all
+
+
+This command installs the modules required for reconnaissance.
+
+Step 7: Search for a Specific Module
+
+Enter the following command:
+modules search hack
+
+
+This searches for installed modules containing the keyword hack.
+
+In this experiment, the module used is:
+recon/domains-hosts/hackertarget
+
+
+Step 8: Load the Module
+
+Enter the following command:
+modules load recon/domains-hosts/hackertarget
+
+
+This loads the Hackertarget module into the current workspace.
+
+After loading the module, the command prompt changes to indicate that the selected module is active.
+
+Step 9: Set the Target Domain
+
+Before executing the module, specify the target domain.
+
+Enter:
+options set SOURCE google.com
+
+
+Here:
+- options set is used to configure module options.
+- SOURCE specifies the target domain.
+- google.com is the target domain used in the PDF.
+Use only an authorized target or a domain permitted for testing.
+
+Step 10: Execute the Module
+
+Enter the following command:
+run
+
+
+This executes the loaded Hackertarget module against the specified domain.
+
+The module collects available host and domain information and displays the results in the terminal.
+
+The output may contain information such as:
+- Hostname
+- IP address
+- Country
+- Domain information
+- Other discovered host details
+
+
+
+
+
+
+
+
+
+
+
 Description
 
 Recon-ng is a free and open-source reconnaissance tool written in Python. It is available on GitHub and can be used in Kali Linux through a command-line interface. Recon-ng is based on Open-Source Intelligence (OSINT) and is used to gather information about a target domain from publicly available sources. Its interface is similar to Metasploit, making it convenient for security professionals and penetration testers to perform reconnaissance.
