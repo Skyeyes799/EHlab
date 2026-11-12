@@ -1,3 +1,7 @@
+1. Aim
+To familiarize with Nmap (Network Mapper) for network footprinting (reconnaissance), host discovery, port scanning, operating system detection and service version detection as part of application penetration testing and vulnerability assessment.
+
+
 Description
 
 Nmap (Network Mapper) is an open-source network scanning tool used in ethical hacking and network security. It helps identify active hosts, open ports, running services, and operating system information on a network. Network scanning is an important step in network reconnaissance and vulnerability assessment.
@@ -11,6 +15,240 @@ Nmap supports different scanning options. A fast scan using the -F option checks
 The results of an Nmap scan include the target IP address, host status, port numbers, port states, service names, and, when available, service versions and operating system details. These results help security professionals assess network exposure and recommend suitable security measures.
 
 Nmap is widely used in penetration testing, network auditing, troubleshooting, and vulnerability assessment. It should be used only on authorized systems and networks.
+
+
+
+
+
+Nmap (Network Mapper) is an open-source network scanning and security auditing tool used to discover hosts and services on a computer network. It is widely used by network administrators and ethical hackers to identify active devices, open ports, running services and operating systems.
+
+Nmap helps security professionals understand the network infrastructure and identify possible security weaknesses. It can scan both local and remote networks and provides detailed information about the target system.
+Network Footprinting
+Network Footprinting is the process of collecting information about a target network or organization to understand its network structure and security posture.
+
+It involves identifying:
+- IP addresses of active devices.
+- Open and closed ports.
+- Running services.
+- Operating systems.
+- Network devices and their configurations.
+- Possible security vulnerabilities.
+Footprinting is an important stage of reconnaissance in ethical hacking.
+Reconnaissance
+Reconnaissance is the information-gathering stage of ethical hacking in which information about the target system is collected.
+
+The main objective is to identify possible attack surfaces and understand the target's network infrastructure.
+
+There are two types of reconnaissance:
+
+1. Passive Reconnaissance
+- Information is collected without directly interacting with the target system.
+- Uses publicly available sources such as websites, search engines and company profiles.
+- It is less detectable by the target.
+2. Active Reconnaissance
+- Involves directly interacting with the target system or network.
+- Uses techniques such as ping scanning, port scanning and service detection.
+- It may be detected by firewalls or intrusion detection systems.
+What is Port Scanning?
+Port scanning is the process of examining ports on a target computer to identify which ports are open, closed or filtered.
+
+A port acts as a communication endpoint through which applications and services communicate over a network.Important Features of Nmap
+1. Host Discovery: Identifies active devices connected to a network.
+2. Port Scanning: Finds open, closed and filtered ports.
+3. Service Detection: Identifies services running on open ports.
+4. Version Detection: Determines the version of running services.
+5. OS Detection: Attempts to identify the operating system of the target.
+6. Network Mapping: Helps understand the structure of a network.
+7. Security Auditing: Helps identify possible security weaknesses.
+3. Important Nmap Commands
+Nmap commands used in the experiment:
+Command	Purpose
+nmap -F target	Performs a fast scan of commonly used ports
+nmap -sn target	Performs host discovery without port scanning
+nmap -p- target	Scans all TCP ports
+nmap -O target	Detects the operating system
+nmap -sV target	Detects service versions
+nmap -A target	Performs aggressive scanning
+nmap -F 192.168.0.0/24	Fast scan of a local network range
+
+
+
+Procedure
+
+A. Using Nmap for Local Networks
+Nmap can be used to discover the size of a local network and identify the number of active devices connected to it.
+
+Step 1: Open Kali Linux.
+
+Start the Kali Linux operating system.
+
+Step 2: Open the Terminal.
+
+Open the terminal window to execute Nmap commands.
+
+Step 3: Identify the local network range.
+
+Find the IP address and subnet mask of the system using:
+ip addr
+
+
+For example, if the network range is 192.168.0.0/24, it represents the local network containing IP addresses from 192.168.0.1 to 192.168.0.254 for ordinary host assignments.
+
+Step 4: Perform a fast Nmap scan.
+
+Execute the following command:
+sudo nmap -F 192.168.0.0/24
+
+
+Here:
+- sudo – Executes the command with administrator privileges.
+- nmap – Starts the Nmap scanning tool.
+- -F – Performs a fast scan of commonly used ports.
+- 192.168.0.0/24 – Specifies the target network range.
+Step 5: Observe the scan results.
+
+Nmap displays information about active hosts, their IP addresses, open ports and running services.
+
+Example output:
+Nmap scan report for 192.168.0.1
+Host is up.
+
+PORT     STATE    SERVICE
+80/tcp   open     http
+443/tcp  open     https
+5000/tcp open     upnp
+8081/tcp filtered blackice-icecap
+
+MAC Address: AC:EC:80:00:EA:17
+
+
+Step 6: Analyze the results.
+- Host is up indicates that the device is active.
+- Open indicates that a service is listening on the port.
+- Closed indicates that the port is reachable but no service is listening.
+- Filtered indicates that a firewall or other network filtering prevents Nmap from determining whether the port is open or closed.
+- MAC Address identifies the hardware address of the network interface.
+The PDF shows an example of scanning a local network on page 5, where multiple active devices and their open ports are identified.
+B. Using Nmap for Remote Networks
+Nmap can also scan remote networks to identify active hosts, open ports and services. This procedure should be performed only against an authorized remote target.
+
+Step 1: Open the Kali Linux terminal.
+
+Step 2: Select the authorized target domain.
+
+For example, the PDF uses:
+wonderhowto.com
+
+
+Step 3: Perform a fast scan.
+
+Execute:
+nmap -F wonderhowto.com
+
+
+Step 4: Observe the scan results.
+
+Nmap resolves the domain name into an IP address and displays the scanning information.
+
+Example output based on the PDF:
+Nmap scan report for wonderhowto.com
+(104.193.19.59)
+
+Host is up.
+
+PORT    STATE      SERVICE
+53/tcp  filtered   domain
+80/tcp  open       http
+139/tcp filtered   netbios-ssn
+443/tcp open       https
+445/tcp filtered   microsoft-ds
+
+
+Step 5: Analyze the results.
+- Identify the IP address associated with the domain.
+- Note the open port numbers.
+- Identify the services running on those ports.
+- Record the filtered and closed ports.
+C. Operating System Detection Using Nmap
+Nmap provides an OS detection feature that attempts to identify the operating system running on a target device.
+
+Step 1: Obtain the target IP address from the previous scan.
+
+Step 2: Execute the following command:
+sudo nmap -O 104.193.19.59
+
+
+Here:
+- sudo – Executes the command with administrator privileges.
+- nmap – Starts the Nmap tool.
+- -O – Enables operating system detection.
+- 104.193.19.59 – Specifies the target IP address.
+Step 3: Observe the output.
+
+Example output from the PDF:
+Nmap scan report for 104.193.19.59
+
+Host is up.
+
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Device type: load balancer
+
+Running (JUST GUESSING):
+Citrix embedded (95%)
+
+Aggressive OS guesses:
+Citrix NetScaler load balancer (95%)
+
+
+Step 4: Analyze the results.
+- Identify the open ports.
+- Observe the device type.
+- Note the detected or guessed operating system.
+- Record the network distance if provided.
+OS detection may not always provide an exact result because of firewalls, network configurations or insufficient response information.
+D. Service Version Detection Using Nmap
+Service version detection is used to identify the software and version information of services running on open ports.
+
+Step 1: Obtain the IP address of the target system.
+
+Step 2: Execute the following command:
+sudo nmap -sV 104.193.19.59
+
+
+Here:
+- sudo – Executes the command with administrator privileges.
+- nmap – Starts Nmap.
+- -sV – Enables service version detection.
+- 104.193.19.59 – Specifies the target IP address.
+Step 3: Observe the output.
+
+Example output from the PDF:
+Nmap scan report for 104.193.19.59
+
+Host is up.
+
+PORT    STATE SERVICE VERSION
+80/tcp  open  http    Microsoft HTTPAPI httpd 2.0
+443/tcp open  ssl/http Microsoft HTTPAPI httpd 2.0
+
+Service Info:
+OS: Windows
+
+
+Step 4: Analyze the results.
+- Identify the open ports.
+- Observe the services running on each port.
+- Identify the software versions.
+- Note the operating system information if available.
+Step 5: Record the findings.
+
+The collected information can be used to understand the target's network infrastructure and identify outdated or potentially vulnerable services for further security assessment.
+
+
+
 
 
 Procedure
