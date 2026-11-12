@@ -1,0 +1,181 @@
+Experiment: DNS Information Gathering Using DIG Command
+Ethical Hacking Lab Exam
+ Theory + Procedure + Algorithm
+
+1. Aim
+To study and use the DIG command to retrieve DNS information about a given domain name and understand the DNS records associated with it.
+2. Theory
+Introduction to DIG
+DIG stands for Domain Information Groper. It is a command-line network administration tool used to retrieve information about DNS (Domain Name System) name servers.
+
+It is mainly used by network administrators for:
+- Performing DNS lookups.
+- Retrieving DNS records of a domain.
+- Verifying DNS configurations.
+- Troubleshooting DNS-related problems.
+- Identifying the IP address associated with a domain name.
+The DIG command is commonly used in Linux-based operating systems such as Kali Linux and Ubuntu.
+
+It is an advanced DNS lookup utility that replaces older tools such as nslookup and host.
+3. Working Principle of DIG
+DIG works by sending a DNS query to a DNS server to obtain information about a particular domain.
+
+The working principle involves the following steps:
+1. The user enters a domain name using the DIG command.
+2. DIG identifies the DNS query that needs to be performed.
+3. The query is sent to the configured DNS server.
+4. The DNS server processes the request.
+5. The DNS server returns the corresponding DNS information.
+6. DIG displays the DNS response in the terminal.
+4. DNS Records
+DIG can retrieve different types of DNS records.
+DNS Record	Description
+A	Maps a domain name to an IPv4 address.
+AAAA	Maps a domain name to an IPv6 address.
+MX	Specifies the mail server of a domain.
+NS	Identifies the authoritative name servers.
+SOA	Provides administrative information about a DNS zone.
+TXT	Stores text-based information associated with a domain.
+CNAME	Specifies an alias for another domain name.
+PTR	Maps an IP address to a domain name (reverse DNS lookup).
+
+5. Procedure
+Step 1: Open Kali Linux
+- Start the Kali Linux operating system.
+- Open the terminal.
+
+
+
+
+Step 2: Check the DIG command
+Type the following command:
+dig -h
+
+
+This displays the help information and available options of the DIG command.
+Step 3: Enter the target domain
+Select a domain name for performing DNS lookup.
+
+Example:
+geeksforgeeks.org
+
+
+Step 4: Execute the DIG command
+Enter the following command in the terminal:
+dig geeksforgeeks.org
+
+
+Explanation:
+- dig – Executes the Domain Information Groper command.
+- geeksforgeeks.org – Specifies the target domain name for DNS lookup.
+Step 5: Send the DNS query
+- DIG sends a DNS query to the configured DNS server.
+- The DNS server processes the query.
+- It retrieves the requested DNS information.
+- The DNS response is returned to the terminal.
+Step 6: Analyze the output
+The DIG command displays the DNS response in different sections.
+
+A. Header Section
+
+Displays information about the DNS query, including:
+- Opcode – Type of DNS operation.
+- Status – Status of the DNS response.
+- ID – Unique query identification number.
+- Flags – Query and response control information.
+B. OPT PSEUDOSECTION
+
+Displays EDNS information, which provides additional DNS capabilities.
+
+C. QUESTION SECTION
+
+Displays the domain name and record type requested in the DNS query.
+
+D. ANSWER SECTION
+
+Displays the actual DNS response.
+
+For example:
+geeksforgeeks.org.  10  IN  A  34.218.62.116
+
+
+Explanation:
+- geeksforgeeks.org – Queried domain name.
+- 10 – TTL (Time To Live) in seconds.
+- IN – Internet DNS class.
+- A – Address record.
+- 34.218.62.116 – IPv4 address returned in the example.
+E. Query Time
+
+Displays the time taken to complete the DNS query.
+
+F. SERVER
+
+Displays the IP address and port of the DNS server that responded to the query.
+
+G. WHEN
+
+Displays the date and time when the query was performed.
+
+
+Step 7: Perform different DNS queries
+The following commands can be used to retrieve different DNS records.
+
+1. To retrieve IPv4 address (A record):
+dig geeksforgeeks.org A
+
+
+2. To retrieve IPv6 address (AAAA record):
+dig geeksforgeeks.org AAAA
+
+
+3. To retrieve mail server information (MX record):
+dig geeksforgeeks.org MX
+
+
+4. To retrieve name server information (NS record):
+dig geeksforgeeks.org NS
+
+
+5. To retrieve text information (TXT record):
+dig geeksforgeeks.org TXT
+
+
+6. To perform reverse DNS lookup:
+dig -x 8.8.8.8
+
+
+Step 8: Stop the execution
+After retrieving and analyzing the DNS information, close the terminal.
+
+
+  
+6. Algorithm
+Algorithm: DNS Information Gathering Using DIG
+1. Start the Kali Linux operating system.
+2. Open the terminal.
+3. Check the availability of the DIG command.
+4. Enter the target domain name.
+5. Execute the DIG command with the target domain.
+6. Send the DNS query to the configured DNS server.
+7. Receive the DNS response from the server.
+8. Display the DNS information in the terminal.
+9. Analyze the header and question sections.
+10. Examine the answer section to identify the corresponding IP address.
+11. Check the query time and DNS server information.
+12. Perform additional queries for different DNS record types if required.
+13. Stop the execution.
+7. Important DIG Commands for Lab Exam
+Command	Purpose
+dig geeksforgeeks.org	Performs a default DNS lookup.
+dig geeksforgeeks.org A	Retrieves IPv4 address.
+dig geeksforgeeks.org AAAA	Retrieves IPv6 address.
+dig geeksforgeeks.org MX	Retrieves mail server records.
+dig geeksforgeeks.org NS	Retrieves name server records.
+dig geeksforgeeks.org TXT	Retrieves TXT records.
+dig geeksforgeeks.org SOA	Retrieves SOA records.
+dig -x 8.8.8.8	Performs reverse DNS lookup.
+dig @8.8.8.8 geeksforgeeks.org	Queries using a specified DNS server.
+
+8. Result
+Thus, DNS information gathering was successfully performed using the DIG command. The DNS lookup retrieved information about the target domain, including its IP address and DNS response details.
