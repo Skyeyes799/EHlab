@@ -1,0 +1,262 @@
+1. Aim
+To study and perform information gathering using Google Dorking techniques to identify publicly available information, hidden resources, files and web pages related to a target website.
+2. Theory
+Introduction to Google Dorking
+Google Dorking is an information-gathering technique that uses special search operators along with regular search keywords to discover specific information indexed by Google.
+
+A Google Dork is a specially constructed search query used to find particular types of information on websites.
+
+It helps ethical hackers and penetration testers discover publicly accessible resources that may not be easily found through normal Google searches.
+
+Google Dorking is also known as Google Hacking.
+3. Purpose of Google Dorking
+Google Dorking is used for:
+1. Information Gathering: Collects publicly available information about a target website.
+2. Finding Hidden Resources: Discovers web pages and directories indexed by search engines.
+3. Finding Sensitive Files: Identifies publicly indexed PDF, Word and other document files.
+4. Discovering Login Pages: Helps locate publicly indexed login and administration pages.
+5. Website Security Assessment: Helps identify accidentally exposed information.
+6. Reconnaissance: Collects information about a target during the initial phase of penetration testing.
+4. Working Principle
+Google Dorking works by using special search operators to filter and refine Google search results.
+
+The working principle involves the following steps:
+1. Select the target website or domain.
+2. Choose the appropriate Google search operator.
+3. Combine the operator with relevant keywords.
+4. Enter the constructed search query into Google.
+5. Google processes the search query.
+6. Google displays web pages matching the search conditions.
+7. Analyze the results to identify useful publicly available information.
+5. Google Dorking Operators
+According to the supplied PDF (pages 7–12), the following operators are explained.
+1. Intitle Operator
+The intitle operator searches for web pages containing specific words or phrases in the title tag.
+
+Syntax:
+intitle:keyword
+Example from the PDF:
+intitle:"index of" password
+Explanation:
+- intitle: searches for specific words in the page title.
+- "index of" searches for pages having the phrase "index of" in their title.
+- password is the additional search keyword.
+Purpose: To identify publicly indexed directory listings and related pages.
+
+2. Inurl Operator
+The inurl operator searches for web pages containing specific words or phrases in their URL.
+
+Syntax:
+inurl:keyword
+
+
+Example from the PDF:
+inurl:admin.php
+
+
+Explanation:
+- inurl: searches for a particular keyword in the URL.
+- admin.php searches for URLs containing the term admin.php.
+Purpose: To identify publicly indexed administration-related pages.
+
+
+3. Site Operator
+The site operator allows searching within a specific website or domain.
+
+Syntax:
+site:domain.com keyword
+
+
+Example from the PDF:
+site:yeahhub.com "Steganography"
+
+
+Explanation:
+- site: restricts the search to a particular website.
+- yeahhub.com specifies the target website.
+- "Steganography" is the search keyword.
+Purpose: To find specific information within a particular website.
+
+
+4. Filetype Operator
+The filetype operator searches for specific file types, such as PDF, DOC and XLS files.
+
+Syntax:
+filetype:extension keyword
+
+
+Example from the PDF:
+filetype:pdf "Advanced Network Security"
+
+
+Explanation:
+- filetype: specifies the required file extension.
+- pdf searches for PDF documents.
+- "Advanced Network Security" specifies the keyword to be searched.
+Purpose: To locate publicly indexed documents of a particular file type.
+
+
+
+5. Intext Operator
+The intext operator searches for specific words or phrases within the body text of a web page.
+
+Syntax:
+intext:keyword
+
+
+Example from the PDF:
+intext:"about" contact
+
+
+Explanation:
+- intext: searches for a specific word within the page content.
+- "about" specifies the word to be searched.
+- contact is an additional search keyword.
+Purpose: To identify web pages containing specific words in their content.
+
+
+
+6. Link Operator
+The link operator is described in the PDF as a search operator used to find web pages linking to a specific URL.
+
+Syntax:
+link:example.com
+
+
+Example from the PDF:
+link:"example.com"
+
+
+Purpose: To identify web pages that contain links to a specified website.
+7. Cache Operator
+The cache operator is described in the PDF as a technique used to retrieve a cached version of a web page.
+
+Syntax:
+cache:https://www.yahoo.com
+
+
+Purpose: To view a previously cached version of a website, which may be useful when the original page is unavailable.
+8. Related Operator
+The related operator is used to find websites related to a specific URL.
+
+Syntax:
+related:website.com
+
+
+Example from the PDF:
+related:yahoo.com
+
+
+Purpose: To identify websites that are similar or related to a particular website.
+6. Procedure
+Step 1: Open a web browser
+- Start the computer.
+- Open a web browser such as Google Chrome or Firefox.
+- Visit the Google search engine.
+Website:
+https://www.google.com
+
+
+Step 2: Select the target website
+Choose a website or domain for information gathering.
+
+Example:
+example.com
+
+
+Use a website you own or are authorized to assess.
+Step 3: Perform Google Dorking using Intitle
+Enter the following search query in Google:
+intitle:"index of" password
+
+
+- Google searches for pages containing "index of" in their title.
+- Examine the publicly indexed search results.
+Step 4: Perform Google Dorking using Inurl
+Enter:
+inurl:admin.php
+
+
+- Google searches for URLs containing admin.php.
+- Examine the matching publicly indexed pages.
+Step 5: Perform Google Dorking using Site
+Enter:
+site:example.com security
+
+
+- Google restricts the search to example.com.
+- It displays pages containing the keyword security.
+Step 6: Perform Google Dorking using Filetype
+Enter:
+filetype:pdf "Advanced Network Security"
+
+
+- Google searches for PDF documents.
+- It displays documents containing the specified search phrase.
+Step 7: Perform Google Dorking using Intext
+Enter:
+intext:"about" contact
+
+
+- Google searches for web pages containing the word "about" in their content.
+- It displays matching search results.
+Step 8: Perform Google Dorking using Link
+Enter:
+link:"example.com"
+
+
+- The operator is intended to search for pages linking to the specified domain.
+- Examine the search results if supported.
+Step 9: Perform Google Dorking using Cache
+Enter:
+cache:https://www.yahoo.com
+
+
+- The operator was historically used to access cached versions of web pages.
+- Examine the result if the feature is available.
+Step 10: Perform Google Dorking using Related
+Enter:
+related:yahoo.com
+
+
+- Google attempts to identify websites related to the specified domain.
+- Examine the related search results.
+Step 11: Analyze the results
+- Identify relevant web pages.
+- Examine publicly indexed documents.
+- Identify exposed information.
+- Record the useful findings.
+- Prepare a report based on the collected information.
+Step 12: Stop the experiment
+After completing the information-gathering process, close the browser.
+
+  
+7. Algorithm
+Algorithm: Information Gathering Using Google Dorking
+1. Start the computer.
+2. Open a web browser.
+3. Navigate to Google search engine.
+4. Select the target website or domain.
+5. Choose an appropriate Google search operator.
+6. Construct a search query using the selected operator and keywords.
+7. Enter the search query into Google.
+8. Allow Google to process the query.
+9. Display the matching search results.
+10. Repeat the process using different operators such as intitle, inurl, site, filetype and intext.
+11. Analyze the search results and identify relevant publicly available information.
+12. Record the findings.
+13. Stop the execution.
+8. Important Google Dorking Commands for Lab Exam
+Operator	Example	Purpose
+intitle	intitle:"index of" password	Searches page titles.
+inurl	inurl:admin.php	Searches URLs.
+site	site:example.com security	Searches within a website.
+filetype	filetype:pdf security	Searches specific file types.
+intext	intext:"about" contact	Searches page content.
+link	link:example.com	Historically searched pages linking to a URL.
+cache	cache:example.com	Historically accessed cached pages.
+related	related:yahoo.com	Historically searched related websites.
+
+Note: The link, cache and related operators are included as described in your PDF. They are deprecated or no longer reliably supported by Google. The other operators are more useful for practical demonstrations.
+9. Result
+Thus, information gathering was studied and performed using Google Dorking techniques. Different Google search operators such as intitle, inurl, site, filetype, intext, link, cache and related were examined to identify publicly available information on the web.
